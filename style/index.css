@@ -1,0 +1,588 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+*{
+    box-sizing:border-box;
+}
+
+/* general style */
+body{
+    font-family: 'Lato', sans-serif;
+}
+
+/* header */
+header{  
+   
+    padding:17px 50px;
+    position: sticky;
+    display:flex;
+    align-items: center;
+    top: 0;
+    z-index: 99;
+    background-color: #FFF;
+    box-shadow: 0px 3px 10px 2px rgba(0,0,0,0.15);
+}
+
+header img{
+    width: 160px;
+    height: 40px;
+    margin-right: 50px;
+}
+
+/* dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-right: 20px;
+    cursor: pointer;
+}
+ul{
+    display: inline;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* action buttons */
+#action-buttons-wrapper {
+    position: absolute;
+    right:50px;
+}
+
+#action-buttons-wrapper button{
+    background: transparent;
+    outline: none;
+    border:none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 4px;
+    
+}
+
+
+#action-buttons-wrapper button:first-child{
+    border:1px solid #3498db;
+}
+
+#action-buttons-wrapper button:last-child{
+    background-color: #3498db;
+    color:white;
+    border: 1px solid #3498db;
+
+}
+#action-buttons-wrapper button:first-child:hover{
+    background-color: #eff0f1;
+}
+
+#action-buttons-wrapper button:last-child:hover{
+    background-color: #175790;
+    border-color: #175790;
+}
+
+/* hero image */
+#hero-image{
+    height: 550px;
+    background-image: url("../assets/images/coverfreelancer-mini2.jpg");
+    background-size: cover;
+    display:flex;
+    align-items: center;
+    color:#fff;
+    padding-left:100px;
+}
+
+#hero-image h1{
+    font-size: 36px;
+    width: 66%;
+    font-weight: 600;
+    line-height: 1.2em;
+    margin-bottom: 20px;
+}
+
+#hero-image p{
+    font-size: 22px;
+    width: 66%;
+    margin-bottom: 20px;
+}
+
+#searchBar-wrapper{
+    background-color: #fff;
+    font-size: 15px;
+    width: 56%;
+    border-radius: 6px;
+    outline: none;
+    padding: 9px;
+    position: relative;
+}
+
+#searchBar-wrapper span{
+    position: absolute;
+    color: #707070;
+    margin-left: 5px;
+}
+
+#searchBar-wrapper input{
+    margin-left: 40px;
+    border: none;
+    outline: none;
+    width: calc(100% - 40px);
+}
+
+#hero-image button{
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 1px solid #72a7d6;
+    border-radius: 6px;
+    outline: none;
+    background-color: #1b6eb7;
+    padding: 15px;
+    color: #fff;
+    margin-right: 10px;
+    transition: all 0.3s;
+}
+
+#hero-image button:hover{
+    background-color: #fff;
+    color: #1b6eb7;
+}
+
+.fre-how-work{
+    padding-top: 40px;
+    padding-bottom: 60px;
+    width:100%;
+    background: #FFF;
+    color: #2c3e50;
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    padding-top: 50px;
+    padding-right: 50px;
+    padding-left: 50px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.fre-how-work h2{
+    font-weight: 400;
+    font-size: 40px;   
+}
+
+.card{
+    width: 50%;
+    padding: 0px 25px;
+}
+
+.card img{
+    width: 70px;
+    margin-bottom: 20px;
+}
+
+.card p{
+    line-height: 22px;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto;
+    height: 452px;
+}
+
+.grid-container > div:first-child{
+    background-image: url("../assets/images/freelancer_poza.jpg");
+    background-size: cover;
+    
+}
+
+.grid-container > div:last-child{
+    background-image: url("../assets/images/clienti_poza.jpg");
+    background-size: cover;
+
+}
+
+.grid-container div h2{
+    color: #f1f1f1;
+    font-size: 30px;
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+
+.grid-container div h3{
+    font-size: 18px;
+    color: #f1f1f1;
+    margin-bottom: 30px;
+}
+
+.grid-container p{
+    font-size: inherit;
+    font-size: 16px;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.grid-container button{
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 1px solid #72a7d6;
+    border-radius: 6px;
+    outline: none;
+    background-color: #1b6eb7;
+    padding: 15px;
+    color: #fff;
+    margin-right: 10px;
+    transition: all 0.3s;
+}
+
+.grid-container button:hover{
+    background-color: #fff;
+    color: #1b6eb7;
+}
+
+.container1{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left: 100px;
+}
+
+.fre-jobs-online{
+    padding-top: 50px;
+}
+
+.fre-jobs-online  h2{
+    font-size: 30px;
+    text-align: center;
+    color: #2c3e50;
+}
+
+.tabs-container{
+    margin:40px 80px;
+    margin-bottom: 80px;
+}
+
+.grid{
+    background-color: #f9f9f9;
+    padding: 30px 30px;
+    margin: 20px 20px;
+    border: 1px solid #f2f2f2;
+    border-bottom: 0px solid #dbdbdb;
+    display: grid;
+    grid-template-columns: 4fr 1fr 1fr 1fr;
+    grid-template-rows:auto auto;
+    grid-row-gap: 30px;
+    grid-column-gap: 10px;
+    grid-template-areas: 
+        "project date budget details"
+        "skills category candidates details"
+}
+
+.project{
+    grid-area: project;
+}
+
+.date{
+    grid-area: date;
+    align-self: center;
+}
+
+.budget{
+    grid-area: budget;
+}
+
+.details{
+    grid-area: details;
+}
+
+.skills{
+    grid-area: skills;
+}
+
+.category{
+    grid-area: category;
+}
+
+.candidates{
+    grid-area: candidates;
+}
+
+.title{
+    font-size: 15px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.description{
+    font-size: 16px;
+    color: #415161;
+}
+
+.project .description{
+    font-size: 20px;
+    font-weight: 600;
+    color: #175790;
+}
+
+.budget .description{
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.candidates span{
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.grid .details {
+    justify-self: center;
+    align-self: center;
+}
+
+.grid button{
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #0070e0;
+    border: 1px solid #547bb9;
+    background-color: white;
+    border-radius: 6px;
+    padding: 8px 24px;
+    outline: none;
+    transition: all 0.3s;
+}
+
+.grid button:hover{
+    background-color: #666f78;
+    color: white;
+}
+
+#low-button{
+    margin: 60px 0;
+    text-align: center;
+}
+
+#low-button button{
+    font-size:15px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: white;
+    border: 2px solid #0070e0;
+    color: #0070e0;
+    padding: 15px;
+    outline: none;
+    border-radius: 6px;
+    transition: all 0.3s;
+}
+
+#low-button button:hover{
+    background-color: #0070e0;
+    color: white;
+}
+
+.search-fre{
+    width: 100%;
+    display: flex;
+    background-color: #f9f9f9;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 35px;
+}
+
+.first{
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
+    letter-spacing: 0.3px;
+}
+
+.first h2{
+    font-size:30px;
+    color:  #2c3e50;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.first p{
+    font-size: 15px;
+    margin-bottom: 15px;
+    line-height: 20px;
+    color: #2c3e50;
+}
+
+.first strong{
+    font-weight: 700;
+}
+
+.second{
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 65px;
+    width: 100%;
+}
+
+.create{
+    width: 100%;
+    display: flex;
+    padding: 78px;
+    background-color: rgb(2, 38, 98);
+}
+
+.item1{
+    /* flex: 4 4 0; */
+    flex-grow: 4;
+    flex-shrink: 4;
+    flex-basis: 0;
+    color:white;
+    font-size: 27px;
+    font-weight: 400;
+}
+
+.item2{
+    flex: 1 1 0;
+}
+
+.item2 button{
+    font-size:14px;
+    font-weight: 700;
+    cursor: pointer;
+    background-color:#1b6eb7;
+    border: 1px solid #72a7d6;
+    color: white;
+    padding: 0 22px;
+    min-width: 170px;
+    height: 48px;
+    outline: none;
+    border-radius: 6px;
+    transition: all 0.3s;
+}
+
+.item2 button:hover{
+    color: #1b6eb7;
+    background-color:white;
+}
+
+
+footer{
+    background-color: #fff;
+    padding-top: 10px;
+}
+
+footer .container{
+    display: flex;
+    padding: 50px;
+    color: #2c3e50;
+}
+
+footer .container > div:nth-child(2n+0)
+{
+    flex: 1 1 0;
+    padding: 0 30px;
+    line-height: 30px;
+}
+
+footer .container > div:nth-child(2n+1)
+{
+    flex: 2 2 0;
+    padding: 0 30px;
+    line-height: 30px;
+
+}
+
+footer .container h1{
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.copyright-wrapper{
+    display: flex;
+    padding:25px 50px;
+    width: 100%;
+    background-color: #131313;
+    position: relative;
+}
+
+.footer-logo img{
+    margin-left: 30px;
+    width: 110px;
+}
+
+.text-copyright{
+    color: white;
+    font-size: 12.5px;
+    position: absolute;
+    right: 30px;
+    padding: 8px 0;
+    margin-right: 70px;
+
+}
